@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react"
+import { ShopContext } from "../Context"
 
 function requestImage (src, alt) {
     const image = <img src={src} alt={alt} />
@@ -7,7 +9,7 @@ function requestImage (src, alt) {
 
 
 
-export default function GoodsItem({goods, addFunc}) {
+export default function GoodsItem({goods, addGoodToTheCart}) {
 
     const {
         mainId,
@@ -31,7 +33,7 @@ export default function GoodsItem({goods, addFunc}) {
                 </p>
             </div>
             <div className="card-action">
-                <button className="btn left" onClick = { ()=>{ addFunc({mainId, displayName, regularPrice, image, displayDescription}) } }>Купить</button>
+                <button className="btn left" onClick = { ()=>{ addGoodToTheCart({mainId, displayName, regularPrice, image, displayDescription}) } }>Купить</button>
                 <span className="right">{regularPrice}</span>
             </div>  
         </div>

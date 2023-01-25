@@ -1,4 +1,3 @@
-
 export default function CardItem(props) {
     const {mainId: id, displayName: title, regularPrice: price, quantity, image, displayDescription, changeGoodsValueInCart} = props
     return <li className="collection-item">

@@ -1,7 +1,9 @@
 import CardItem from "./CartItem"
+import { useContext } from "react"
+import { ShopContext } from "../Context"
 
-export default function CartPopup(props){
-    const {goodsInCart, changeGoodsValueInCart, changeActive} = props
+export default function CartPopup(){
+    const {goodsInCart, changeGoodsValueInCart, changeActive} = useContext(ShopContext)
     let cost = 0
 
     return <ul className="collection">

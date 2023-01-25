@@ -2,12 +2,15 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Shop from "./layout/Shop";
 import React from "react";
+import ShopContextWrapper from "./Context";
 
 
 function App() {
   return <>
       <Header/>
-      <Shop/>
+      <ShopContextWrapper>
+        <Shop/>
+      </ShopContextWrapper>
       <Footer/>
     </>
 }

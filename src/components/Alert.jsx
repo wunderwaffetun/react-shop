@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-
+import { useEffect, useContext } from "react";
+import { ShopContext } from "../Context";
 export default function Alert(props){
-    const { alertName, alertClear } = props
+    const { alertName, alertClear } = useContext(ShopContext)
 
     useEffect(()=>{
         const timer = setTimeout(()=>{
